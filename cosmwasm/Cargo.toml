@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+members = ["matlab"]
+
+[workspace.dependencies]
+serde = "1.0.217"
+
+
+
+[profile.release]
+opt-level = 'z'
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+panic = 'abort'
+incremental = false
+overflow-checks = true
